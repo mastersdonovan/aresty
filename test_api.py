@@ -21,15 +21,15 @@ tweet_ids = [
 
 
 def main():
-    for tweet_id in tweet_ids:
-        url = f"https://api.x.com/2/tweets/{tweet_id}"
-        try:
+    try:
+        for tweet_id in tweet_ids:
+            url = f"https://api.x.com/2/tweets/{tweet_id}"
             response = requests.get(url, headers=headers)
             if response.status_code != 402:
                 print(f"--- Tweet {tweet_id} ---\n {json.dumps(response.json(), indent=4)}")
-        except requests.exceptions.RequestException as e:
+                time.sleep(1)
+    except requests.exceptions.RequestException as e:
             print(f"An error occurred: {e}")
-        time.sleep(1)
         
 if __name__ == "__main__":
     main() 
