@@ -49,7 +49,7 @@ def print_result(label, response):
 
 def main():
 
-    # COUNTS ENDPOINT
+    # ── 1. COUNTS ENDPOINT ─────────────────────────────────────────
     print("\n\n>>> [1/3] COUNTS ENDPOINT")
     print(f"    Query: {QUERY}")
     url = "https://api.x.com/2/tweets/counts/recent"
@@ -62,7 +62,7 @@ def main():
 
     time.sleep(1)
 
-    # SEARCH ENDPOINT
+    # ── 2. SEARCH ENDPOINT ─────────────────────────────────────────
     print("\n\n>>> [2/3] SEARCH ENDPOINT")
     print(f"    Query: {QUERY}")
     url = "https://api.x.com/2/tweets/search/recent"
@@ -80,7 +80,7 @@ def main():
 
     time.sleep(1)
 
-    # TWEETS LOOKUP ENDPOINT 
+    # ── 3. TWEETS LOOKUP ENDPOINT ──────────────────────────────────
     print("\n\n>>> [3/3] TWEETS LOOKUP ENDPOINT (batch of IDs)")
     url = "https://api.x.com/2/tweets"
     params = {
